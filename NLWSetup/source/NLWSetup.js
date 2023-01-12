@@ -1,6 +1,6 @@
 /**
  * @classdesc This class will be used in NLW #11 Setup and will help students
- * to create the event project by simplifying several JS concepts
+ * to create the event's project by simplifying several JS concepts
  */
 var NLWSetup = class NLWSetup {
 

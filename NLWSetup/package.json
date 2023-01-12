@@ -1,0 +1,28 @@
+{
+  "name": "libs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NLWSetup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maykbrito/libs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maykbrito/libs/issues"
+  },
+  "homepage": "https://github.com/maykbrito/libs#readme",
+  "devDependencies": {
+    "better-docs": "^2.7.2",
+    "jsdoc": "^4.0.0"
+  },
+  "dependencies": {
+    "docdash": "^2.0.1"
+  }
+}

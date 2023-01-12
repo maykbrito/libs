@@ -1,0 +1,29 @@
+{
+	"source": {
+		"include": ["source"],
+		"includePattern": ".js$",
+		"excludePattern": "(node_modules/|docs)"
+	},
+	"plugins": ["plugins/markdown"],
+	"markdown": {
+        "parser": "gfm",
+        "hardwrap": true,
+        "idInHeadings": true
+    },
+	"templates": {
+		"cleverLinks": true,
+		"monospaceLinks": true
+	},
+	"opts": {
+		"recurse": true,
+		"destination": "./documentation/",
+		"template": "node_modules/docdash"
+	},
+	"docdash": {
+        "static": true,
+        "sort": true,
+		"collapse": true,
+        "typedefs": true,
+        "removeQuotes": "none"
+	}
+}

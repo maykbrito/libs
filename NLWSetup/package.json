@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/maykbrito/libs#readme",
   "devDependencies": {
-    "better-docs": "^2.7.2",
     "jsdoc": "^4.0.0"
   },
   "dependencies": {

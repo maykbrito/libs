@@ -1,37 +1,39 @@
 /**
  * @classdesc This class will be used in NLW #11 Setup and will help students
- * to create the event's project by simplifying several JS concepts
+ * to create the event's project by simplifying several JS concepts.
  */
 var NLWSetup = class NLWSetup {
-
-  /**
+  /** 
    * Object that contains the data composed by
-   * - **key**: The habit name as the `data-name` of the `.habit` container
-   * - **value**: `array of days to be checked as done`
-   *
+   * 
+   * **key**: The habit name as the `data-name` of the `.habit` container
+   * **value**: `Array` of days to be checked as done
+   * **day**: Each day must be like the format `MM-DD` _MM: month, DD: day_
+   * 
+   * 
    * ```js
-   * { run: ['01-01', '01-02', '01-06'] }
+   *  { run: ['01-01', '01-02', '01-06'] }
    * ```
+   * @private
    */
   data = {}
 
   /**
    * Array of habits
    * camelCase: `run, eatFood`
-   * 
    * @private
    */
   habits = []
 
   /**
    * `new Set()` of days to build the display of habits by days
-   * 
    * @private
    */
   days = new Set()
 
   /**
-   * The form element. The `HTML` must be like this
+   * You must build the `HTML` structure like this
+   * 
    * ```html
    * <form>
    *   <div class="habits">
@@ -45,11 +47,14 @@ var NLWSetup = class NLWSetup {
    * ```
    * 
    * Example of usage
+   * 
    * ```js
    * const form = document.querySelector('form')
    * const nlwSetup = new NLWSetup(form)
    * ```
+   * 
    * @param {HTMLFormElement} form
+   * 
    */
   constructor(form) {
     this.form = form
@@ -151,7 +156,10 @@ var NLWSetup = class NLWSetup {
   }
 
   /**
-   The data to build the habit table
+   * The data to build the habits table
+   *
+   * Example of usage
+   * 
    * ```js
    * const data = { 
    *   run: ['01-01', '01-02', '01-06'], 
@@ -161,7 +169,18 @@ var NLWSetup = class NLWSetup {
    * 
    * nlwSetup.setData(data)
    * ```
-   * @param {object} data [see data](#data)
+   * 
+   * @param {object} data Object that contains the data composed by
+   * 
+   * - key: The habit name as the `data-name` of the `.habit` container
+   * - value: `Array` of days to be checked as done
+   * 
+   * _Each day must be like the format `MM-DD` 
+   * where `MM`: is the month and `DD`: is the day_
+   * 
+   * ```js
+   *  { run: ['01-01', '01-02', '01-06'] }
+   * ```
    */
   setData(data) {
     if (!data) {
